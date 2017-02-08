@@ -3,11 +3,13 @@ $('#login').click(function(){
     
     var login = $("#loginInput").val();
     var senha = $("#senhaInput").val();
+    var grupo = $("#grupoUser").val();
     
     if(login!="ctmcadastro"&&senha!="ctm99380410"){
     	$("#mensagem").html('<span class="label label-danger">Login ou Senha incorretos</span>');
     }else{
     	$("#mensagem").html('<span class="label label-success">Login e Senha corretos, redirecionando...</span>');
+      localStorage.setItem("grupo", grupo);
     	location.href="dashboard.html";
     }
 
@@ -999,6 +1001,7 @@ function sincronia(){
    var chave = localStorage.getItem("chave"); 
    var chave_mercant = localStorage.getItem("chave_mercant");
    var chave_bens = localStorage.getItem("chave_bens");
+   var grupoUser = localStorage.getItem("grupo");
 
    var flag = 1;
    var flagMercantil = 1;
@@ -1125,7 +1128,8 @@ function sincronia(){
                     estado_conservacao: estado_conservacao,
                     nome_proprietario: nome_proprietario,
                     cpf_cnpj: cpf_cnpj,
-                    acao: acao
+                    acao: acao,
+                    grupo:grupoUser
                 }
             })
 
@@ -1221,7 +1225,8 @@ function sincronia(){
                     mercant_observacao:mercant_observacao,
                     mercant_codigo_atividade:mercant_codigo_atividade,
                     mercant_descricao_atividade:mercant_descricao_atividade,
-                    acao_mercantil:acao_mercantil
+                    acao_mercantil:acao_mercantil,
+                    grupo:grupoUser
                 }
             })
 
@@ -1361,7 +1366,8 @@ function sincronia(){
                     bens_orgao_transferencia:bens_orgao_transferencia,
                     bens_setor_transferencia:bens_setor_transferencia,
                     bens_unidade_transferencia:bens_unidade_transferencia,
-                    acao_bens:acao_bens
+                    acao_bens:acao_bens,
+                    grupo:grupoUser
                 }
             })
 
