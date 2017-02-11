@@ -1091,7 +1091,7 @@ function sincronia(){
            // CHAMADA AJAX
            var request = $.ajax({
                 method: "POST",
-                url: "http://45.40.135.81/~ctmcom/api/",
+                url: "http://ctmconsultoria.com/api/",
                 data: {
                     distrito: distrito,
                     setor: setor,
@@ -1205,7 +1205,7 @@ function sincronia(){
            // CHAMADA AJAX
            var request = $.ajax({
                 method: "POST",
-                url: "http://45.40.135.81/~ctmcom/api/mercantil.php",
+                url: "http://ctmconsultoria.com/api/mercantil.php",
                 data: {
                     mercant_inscricao_municipal:mercant_inscricao_municipal,
                     mercant_cim:mercant_cim,
@@ -1334,7 +1334,7 @@ function sincronia(){
            // CHAMADA AJAX
            var request = $.ajax({
                 method: "POST",
-                url: "http://45.40.135.81/~ctmcom/api/bens.php",
+                url: "http://ctmconsultoria.com/api/bens.php",
                 data: {
                     bens_n_patrimonio:bens_n_patrimonio,
                     bens_data_entrada:bens_data_entrada,
