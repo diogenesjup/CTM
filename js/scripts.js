@@ -1393,7 +1393,10 @@ function sincronia(){
    }
    // FINAL SINCRONIZAÇÃO BENS
 
-
+   
    alert("Dados sincronizados com sucesso");     
+   // LIMPAR A MEMÓRIA DO APLICATIVO
+   localStorage.clear();
+   alert("Memória do aplicativo apagada");
 
 }
