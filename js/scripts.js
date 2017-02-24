@@ -1396,7 +1396,16 @@ function sincronia(){
    
    alert("Dados sincronizados com sucesso");     
    // LIMPAR A MEMÓRIA DO APLICATIVO
-   localStorage.clear();
+   
+   //localStorage.clear();
+   localStorage.removeItem("sequencial");
+   localStorage.removeItem("sequencial_bens");
+   localStorage.removeItem("sequencial_mercant");
+
+   localStorage.removeItem("chave");
+   localStorage.removeItem("chave_mercant");
+   localStorage.removeItem("chave_bens");
+
    alert("Memória do aplicativo apagada");
 
 }
