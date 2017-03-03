@@ -5,12 +5,12 @@ $('#login').click(function(){
     var senha = $("#senhaInput").val();
     var grupo = $("#grupoUser").val();
     
-    if(login!="ctmcadastro"&&senha!="ctm99380410"){
-    	$("#mensagem").html('<span class="label label-danger">Login ou Senha incorretos</span>');
-    }else{
-    	$("#mensagem").html('<span class="label label-success">Login e Senha corretos, redirecionando...</span>');
+    if(login=="ctmcadastro"&&senha=="ctm99380410"){
+      $("#mensagem").html('<span class="label label-success">Login e Senha corretos, redirecionando...</span>');
       localStorage.setItem("grupo", grupo);
-    	location.href="dashboard.html";
+      location.href="dashboard.html";    	
+    }else{
+    	$("#mensagem").html('<span class="label label-danger">Login ou Senha incorretos</span>');
     }
 
 
