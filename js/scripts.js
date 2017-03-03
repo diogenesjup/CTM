@@ -1392,20 +1392,21 @@ function sincronia(){
 
    }
    // FINAL SINCRONIZAÇÃO BENS
-
    
    alert("Dados sincronizados com sucesso");     
    // LIMPAR A MEMÓRIA DO APLICATIVO
    
    //localStorage.clear();
-   localStorage.removeItem("sequencial");
-   localStorage.removeItem("sequencial_bens");
-   localStorage.removeItem("sequencial_mercant");
 
-   localStorage.removeItem("chave");
-   localStorage.removeItem("chave_mercant");
-   localStorage.removeItem("chave_bens");
+   localStorage.setItem("sequencial", 0);
+   localStorage.setItem("chave", 0);
+   localStorage.setItem("sequencial_mercant",0);
+   localStorage.setItem("chave_mercant", 0);
+   localStorage.setItem("sequencial_bens",0);
+   localStorage.setItem("chave_bens", 0);
 
    alert("Memória do aplicativo apagada");
+
+   location.href="dashboard.html";
 
 }
