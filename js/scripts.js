@@ -1048,7 +1048,9 @@ function sincronia(){
        var cpf_cnpj = 999;
        var acao = 999;
 
-   while(flag < chave){
+   while(flag <= chave){
+
+         if(localStorage.getItem("sinc["+flag+"]")!="sim"){
 
            distrito = localStorage.getItem("imovel_distrito["+flag+"]");
            setor = localStorage.getItem("imovel_setor["+flag+"]");
@@ -1149,6 +1151,8 @@ function sincronia(){
             // FINAL DA CHAMADA AJAX
       
       localStorage.setItem("sinc["+flag+"]", "sim");
+
+     }
      
       flag = flag + 1;
 
@@ -1180,7 +1184,9 @@ function sincronia(){
        var acao_mercantil = 999;
 
 
-   while(flagMercantil < chave_mercant){
+   while(flagMercantil <= chave_mercant){
+
+          if(localStorage.getItem("sinc_mercantil["+flagMercantil+"]")!="sim"){
 
            mercant_inscricao_municipal = localStorage.getItem("inscricao_municipal["+flagMercantil+"]");
            mercant_cim = localStorage.getItem("cim["+flagMercantil+"]");
@@ -1247,6 +1253,8 @@ function sincronia(){
 
       localStorage.setItem("sinc_mercantil["+flagMercantil+"]", "sim");
 
+    }
+
       flagMercantil = flagMercantil + 1;
 
    }
@@ -1296,7 +1304,9 @@ function sincronia(){
        var acao_bens = 999;
 
 
-   while(flagBens < chave_bens){
+   while(flagBens <= chave_bens){
+
+           if(localStorage.getItem("sinc_bens["+flagBens+"]")!="sim"){
           
            bens_n_patrimonio = localStorage.getItem("n_patrimonio["+flagBens+"]");
            bens_data_entrada = localStorage.getItem("data_entrada["+flagBens+"]");
@@ -1388,6 +1398,8 @@ function sincronia(){
       
       localStorage.setItem("sinc_bens["+flagBens+"]", "sim"); 
 
+    }
+
       flagBens = flagBens + 1;
 
    }
@@ -1398,12 +1410,14 @@ function sincronia(){
    
    //localStorage.clear();
 
-   localStorage.setItem("sequencial", 0);
-   localStorage.setItem("chave", 0);
-   localStorage.setItem("sequencial_mercant",0);
-   localStorage.setItem("chave_mercant", 0);
-   localStorage.setItem("sequencial_bens",0);
-   localStorage.setItem("chave_bens", 0);
+   //localStorage.setItem("sequencial", 0);
+   //localStorage.setItem("chave", 0);
+   //localStorage.setItem("sequencial_mercant",0);
+   //localStorage.setItem("chave_mercant", 0);
+   //localStorage.setItem("sequencial_bens",0);
+   //localStorage.setItem("chave_bens", 0);
+
+   //iniciarProcessos();
 
    alert("Memória do aplicativo apagada");
 
